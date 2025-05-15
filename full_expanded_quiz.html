@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест: Нужен ли мне курс?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .result {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Тест: Нужен ли мне курс?</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. Можешь ли ты назвать свои чувства прямо сейчас?</p>
+                <label><input type="radio" name="q1" value="0"> Да, я хорошо понимаю, что чувствую.</label><br>
+                <label><input type="radio" name="q1" value="1"> Иногда понимаю, но часто путаюсь.</label><br>
+                <label><input type="radio" name="q1" value="2"> Мне сложно даже начать описывать, что я чувствую.</label>
+            </div>
+            <div class="question">
+                <p>2. Часто ли ты ощущаешь усталость или внутреннюю опустошённость без видимой причины?</p>
+                <label><input type="radio" name="q2" value="0"> Нет, такое бывает редко.</label><br>
+                <label><input type="radio" name="q2" value="1"> Иногда накрывает.</label><br>
+                <label><input type="radio" name="q2" value="2"> Да, почти постоянно.</label>
+            </div>
+            <div class="question">
+                <p>3. Есть ли у тебя переживания, которые ты избегал(а) или «закрывал(а)» в себе?</p>
+                <label><input type="radio" name="q3" value="0"> Вроде нет, я всё прожил(а).</label><br>
+                <label><input type="radio" name="q3" value="1"> Возможно, но не уверен(а).</label><br>
+                <label><input type="radio" name="q3" value="2"> Да, и я стараюсь к ним не возвращаться.</label>
+            </div>
+            <div class="question">
+                <p>4. Как ты реагируешь на внутреннюю боль или дискомфорт?</p>
+                <label><input type="radio" name="q4" value="0"> Разбираюсь с этим осознанно.</label><br>
+                <label><input type="radio" name="q4" value="1"> Иногда подавляю, иногда разбираюсь.</label><br>
+                <label><input type="radio" name="q4" value="2"> Обычно отвлекаюсь или подавляю.</label>
+            </div>
+            <div class="question">
+                <p>5. Бывают ли у тебя повторяющиеся сценарии в жизни, которые причиняют боль?</p>
+                <label><input type="radio" name="q5" value="0"> Нет, я научился(ась) обходить их.</label><br>
+                <label><input type="radio" name="q5" value="1"> Иногда повторяются.</label><br>
+                <label><input type="radio" name="q5" value="2"> Да, снова и снова.</label>
+            </div>
+            <div class="question">
+                <p>6. Можешь ли ты быть с собой наедине и чувствовать при этом внутренний покой?</p>
+                <label><input type="radio" name="q6" value="0"> Да, я в этом устойчив(а).</label><br>
+                <label><input type="radio" name="q6" value="1"> Иногда да, иногда нет.</label><br>
+                <label><input type="radio" name="q6" value="2"> Нет, мне тревожно или скучно наедине.</label>
+            </div>
+            <div class="question">
+                <p>7. Как ты относишься к «неудобным» чувствам — злости, вине, страху?</p>
+                <label><input type="radio" name="q7" value="0"> Принимаю и умею проживать.</label><br>
+                <label><input type="radio" name="q7" value="1"> Иногда избегаю.</label><br>
+                <label><input type="radio" name="q7" value="2"> Предпочитаю вообще не чувствовать их.</label>
+            </div>
+            <div class="question">
+                <p>8. Есть ли у тебя мечты или желания, на которые «не хватает сил»?</p>
+                <label><input type="radio" name="q8" value="0"> Нет, я иду к своим целям.</label><br>
+                <label><input type="radio" name="q8" value="1"> Есть, но откладываю.</label><br>
+                <label><input type="radio" name="q8" value="2"> Да, и чувствую, что будто бы «не могу».</label>
+            </div>
+            <div class="question">
+                <p>9. Ты чувствуешь, что в тебе что-то «застряло» или требует внимания?</p>
+                <label><input type="radio" name="q9" value="0"> Нет, я чувствую себя свободно.</label><br>
+                <label><input type="radio" name="q9" value="1"> Иногда появляются такие ощущения.</label><br>
+                <label><input type="radio" name="q9" value="2"> Да, часто чувствую внутренний комок.</label>
+            </div>
+            <div class="question">
+                <p>10. Хочешь ли ты мягко, но глубоко исследовать себя?</p>
+                <label><input type="radio" name="q10" value="0"> Я уже в этом процессе.</label><br>
+                <label><input type="radio" name="q10" value="1"> Думаю, да.</label><br>
+                <label><input type="radio" name="q10" value="2"> Очень хочу, но не знаю как.</label>
+            </div>
+            <button type="button" onclick="calculateResult()">Узнать результат</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            let total = 0;
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector('input[name="q' + i + '"]:checked');
+                if (selected) {
+                    total += parseInt(selected.value);
+                } else {
+                    alert('Пожалуйста, ответьте на все вопросы.');
+                    return;
+                }
+            }
+            let resultText = '';
+            if (total <= 5) {
+                resultText = 'Ты в хорошем контакте с собой. Этот курс может стать для тебя тонкой настройкой.';
+            } else if (total <= 13) {
+                resultText = 'Ты на пути. Этот курс поможет мягко вернуться к себе и лучше слышать свои чувства.';
+            } else {
+                resultText = 'Внутри тебя много непрожитого. Курс поможет тебе начать мягкую внутреннюю работу.';
+            }
+            document.getElementById('result').innerText = resultText;
+        }
+    </script>
+</body>
+</html>
